@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dalum Landbrugsskole Café</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        /* Venstre side: Musik */
+        .music-section {
+            flex: 1;
+            border-right: 8px solid #005a87;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Højre side: Prisliste */
+        .price-section {
+            flex: 1;
+            padding: 40px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .header-box {
+            background-color: #005a87;
+            width: 100%;
+            padding: 20px 0;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: white;
+            margin: 0;
+            font-size: 2.2em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .price-table {
+            width: 90%;
+            border-collapse: collapse;
+        }
+
+        .price-table td {
+            padding: 12px 15px;
+            font-size: 1.4em;
+            border-bottom: 1px solid #eee;
+        }
+
+        .item-name {
+            text-align: left;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .price-value {
+            text-align: right;
+            color: #005a87;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-style: italic;
+            color: #7f8c8d;
+            font-size: 1.1em;
+            border-top: 2px solid #005a87;
+            padding-top: 10px;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="music-section">
+        <iframe src="https://display.soundtrack.io/MGEDYL"></iframe>
+    </div>
+
+    <div class="price-section">
+        <div class="header-box">
+            <h1>Caféen Dalum</h1>
+        </div>
+        
+        <table class="price-table">
+            <tr><td class="item-name">Øl</td><td class="price-value">25 kr.-</td></tr>
+            <tr><td class="item-name">Shakere</td><td class="price-value">25 kr.-</td></tr>
+            <tr><td class="item-name">Astronaut-special & Dalum-special</td><td class="price-value">55 kr.-</td></tr>
+            <tr><td class="item-name">Champagnebrus & Astronaut</td><td class="price-value">40 kr.-</td></tr>
+            <tr><td class="item-name">Sodavand</td><td class="price-value">20 kr.-</td></tr>
+            <tr><td class="item-name">Cocio</td><td class="price-value">20 kr.-</td></tr>
+            <tr><td class="item-name">Vand</td><td class="price-value">15 kr.-</td></tr>
+            <tr><td class="item-name">Faxekondi booster</td><td class="price-value">30 kr.-</td></tr>
+            <tr><td class="item-name">Toast</td><td class="price-value">15 kr.-</td></tr>
+            <tr><td class="item-name">Chips</td><td class="price-value">20 kr.-</td></tr>
+            <tr><td class="item-name">Kasse shaker</td><td class="price-value">575 kr.-</td></tr>
+            <tr><td class="item-name">Fustage øl</td><td class="price-value">900 kr.-</td></tr>
+        </table>
+        
+        <div class="footer">Velkommen i caféen</div>
+    </div>
+</div>
+
+</body>
+</html>
