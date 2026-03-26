@@ -3,27 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dalum Landbrugsskole Café</title>
+    <title>Dalum Café TV - 1080p</title>
     <style>
+        /* Optimering til 1920x1080 skærm */
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            overflow: hidden;
-            background-color: #f4f4f4;
+            height: 100vh;
+            width: 100vw;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            overflow: hidden; /* Fjerner scrollbars helt */
+            background-color: #000; /* Sort baggrund bagved, hvis noget driller */
         }
 
         .container {
             display: flex;
-            height: 100vh;
-            width: 100vw;
+            height: 100%;
+            width: 100%;
         }
 
-        /* Venstre side: Musik */
+        /* Venstre side: Musik (Præcis 50%) */
         .music-section {
-            flex: 1;
-            border-right: 8px solid #005a87;
+            width: 50%;
+            height: 100%;
+            border-right: 10px solid #005a87;
+            background-color: #f4f4f4;
         }
 
         iframe {
@@ -32,84 +36,82 @@
             border: none;
         }
 
-        /* Højre side: Prisliste */
+        /* Højre side: Prisliste (Præcis 50%) */
         .price-section {
-            flex: 1;
-            padding: 20px 40px;
+            width: 50%;
+            height: 100%;
             background-color: white;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            text-align: center;
+            justify-content: space-around; /* Fordeler indholdet jævnt på højden */
+            padding: 40px;
+            box-sizing: border-box;
         }
 
         .header-box {
             background-color: #005a87;
             width: 100%;
-            padding: 15px 0;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 25px 0;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }
 
         h1 {
             color: white;
             margin: 0;
-            font-size: 2em;
+            font-size: 3.5em; /* Meget stor overskrift til TV */
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 4px;
         }
 
         .price-table {
-            width: 95%;
+            width: 90%;
             border-collapse: collapse;
         }
 
         .price-table td {
-            padding: 8px 15px; /* Lidt mindre padding for at skabe plads */
-            font-size: 1.25em; /* Justeret skriftstørrelse for prislisten */
-            border-bottom: 1px solid #eee;
+            padding: 12px 20px;
+            font-size: 1.8em; /* Stor tekst til priserne */
+            border-bottom: 2px solid #eee;
         }
 
         .item-name {
             text-align: left;
-            font-weight: 600;
-            color: #333;
+            font-weight: 700;
+            color: #222;
         }
 
         .price-value {
             text-align: right;
             color: #005a87;
-            font-weight: bold;
+            font-weight: 900;
             white-space: nowrap;
         }
 
-        /* Quote Sektion - Opdateret for at holde citatet på én linje */
+        /* Quote Sektion - Optimeret til én linje på TV */
         .quote-container {
-            margin-top: 25px;
-            padding: 15px 0;
-            border-top: 2px solid #005a87;
-            width: 95%; /* Gør boksen bredere for at give plads til citatet */
+            width: 100%;
+            border-top: 4px solid #005a87;
+            padding-top: 20px;
+            margin-top: 10px;
         }
 
         .quote-text {
-            font-size: 1.2em; /* Skriftstørrelsen er sat lidt ned */
+            font-size: 1.6em; /* Stor læsbar skrift */
             font-style: italic;
-            color: #2c3e50;
+            color: #333;
             display: block;
-            margin-bottom: 8px;
-            white-space: nowrap; /* Tvinger teksten til at blive på én linje */
-            overflow: hidden; /* Sikrer, at teksten ikke går ud over boksen */
-            text-overflow: ellipsis; /* Tilføjer '...' hvis teksten er for lang, men på de fleste skærme vil det stå fuldt ud */
+            margin-bottom: 10px;
+            white-space: nowrap; /* Tvinger én linje */
         }
 
         .footer {
-            font-weight: bold;
+            font-weight: 800;
             color: #005a87;
-            font-size: 1.1em;
+            font-size: 1.8em;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
         }
     </style>
 </head>
@@ -141,7 +143,7 @@
         </table>
         
         <div class="quote-container">
-            <span class="quote-text">"En god dag starter med kaffe - men ender altid med øl🍻"</span>
+            <span class="quote-text">"En god dag starter med kaffe - men ender altid med øl"</span>
             <div class="footer">Velkommen i caféen</div>
         </div>
     </div>
