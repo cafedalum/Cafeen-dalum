@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dalum Café TV - 1080p</title>
+    <title>Dalum Café TV - Hvid baggrund</title>
     <style>
-        /* Optimering til 1920x1080 skærm */
         body, html {
             margin: 0;
             padding: 0;
             height: 100vh;
             width: 100vw;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            overflow: hidden; /* Fjerner scrollbars helt */
-            background-color: #000; /* Sort baggrund bagved, hvis noget driller */
+            font-family: 'Segoe UI', Arial, sans-serif;
+            overflow: hidden;
+            background-color: #ffffff !important; /* Tvinger hvid baggrund */
         }
 
         .container {
@@ -22,12 +21,11 @@
             width: 100%;
         }
 
-        /* Venstre side: Musik (Præcis 50%) */
+        /* Venstre side: Musik */
         .music-section {
             width: 50%;
             height: 100%;
-            border-right: 10px solid #005a87;
-            background-color: #f4f4f4;
+            border-right: 5px solid #005a87;
         }
 
         iframe {
@@ -36,82 +34,84 @@
             border: none;
         }
 
-        /* Højre side: Prisliste (Præcis 50%) */
+        /* Højre side: Prisliste */
         .price-section {
             width: 50%;
             height: 100%;
-            background-color: white;
+            background-color: #ffffff !important; /* Tvinger hvid baggrund på selve sektionen */
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-around; /* Fordeler indholdet jævnt på højden */
-            padding: 40px;
+            justify-content: flex-start; /* Starter fra toppen */
+            padding: 20px 40px;
             box-sizing: border-box;
         }
 
         .header-box {
             background-color: #005a87;
             width: 100%;
-            padding: 25px 0;
-            border-radius: 12px;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            padding: 10px 0;
+            margin-bottom: 15px;
+            border-radius: 8px;
         }
 
         h1 {
-            color: white;
+            color: #ffffff;
             margin: 0;
-            font-size: 3.5em; /* Meget stor overskrift til TV */
+            font-size: 2em;
             text-transform: uppercase;
-            letter-spacing: 4px;
+            letter-spacing: 2px;
         }
 
+        /* Tabel med mindre skrift for at sikre plads */
         .price-table {
-            width: 90%;
+            width: 100%;
             border-collapse: collapse;
+            margin-bottom: 15px;
         }
 
         .price-table td {
-            padding: 12px 20px;
-            font-size: 1.8em; /* Stor tekst til priserne */
-            border-bottom: 2px solid #eee;
+            padding: 6px 15px; /* Mindre luft mellem linjerne */
+            font-size: 1.15em; /* Mindre skriftstørrelse så alt kan være der */
+            border-bottom: 1px solid #eeeeee;
         }
 
         .item-name {
             text-align: left;
             font-weight: 700;
-            color: #222;
+            color: #1a1a1a;
         }
 
         .price-value {
             text-align: right;
             color: #005a87;
-            font-weight: 900;
+            font-weight: 800;
             white-space: nowrap;
         }
 
-        /* Quote Sektion - Optimeret til én linje på TV */
-        .quote-container {
+        /* Quote & Footer samlet tæt i bunden */
+        .bottom-section {
+            margin-top: auto; /* Skubber denne del helt til bunden */
+            padding-bottom: 15px;
             width: 100%;
-            border-top: 4px solid #005a87;
-            padding-top: 20px;
-            margin-top: 10px;
+            text-align: center;
+            border-top: 3px solid #005a87;
+            padding-top: 10px;
         }
 
         .quote-text {
-            font-size: 1.6em; /* Stor læsbar skrift */
+            font-size: 1.1em;
             font-style: italic;
-            color: #333;
+            color: #444444;
             display: block;
-            margin-bottom: 10px;
-            white-space: nowrap; /* Tvinger én linje */
+            margin-bottom: 5px;
         }
 
         .footer {
             font-weight: 800;
             color: #005a87;
-            font-size: 1.8em;
+            font-size: 1.3em;
             text-transform: uppercase;
-            letter-spacing: 2px;
         }
     </style>
 </head>
@@ -128,21 +128,21 @@
         </div>
         
         <table class="price-table">
-            <tr><td class="item-name">Øl</td><td class="price-value">25 kr.-</td></tr>
-            <tr><td class="item-name">Shakere</td><td class="price-value">25 kr.-</td></tr>
-            <tr><td class="item-name">Astronaut-special & Dalum-special</td><td class="price-value">55 kr.-</td></tr>
-            <tr><td class="item-name">Champagnebrus & Astronaut</td><td class="price-value">40 kr.-</td></tr>
-            <tr><td class="item-name">Sodavand</td><td class="price-value">20 kr.-</td></tr>
-            <tr><td class="item-name">Cocio</td><td class="price-value">20 kr.-</td></tr>
-            <tr><td class="item-name">Vand</td><td class="price-value">15 kr.-</td></tr>
-            <tr><td class="item-name">Faxekondi booster</td><td class="price-value">30 kr.-</td></tr>
-            <tr><td class="item-name">Toast</td><td class="price-value">15 kr.-</td></tr>
-            <tr><td class="item-name">Chips</td><td class="price-value">20 kr.-</td></tr>
-            <tr><td class="item-name">Kasse shaker</td><td class="price-value">575 kr.-</td></tr>
-            <tr><td class="item-name">Fustage øl</td><td class="price-value">900 kr.-</td></tr>
+            <tr><td class="item-name">Øl</td><td class="price-value">25,-</td></tr>
+            <tr><td class="item-name">Shakere</td><td class="price-value">25,-</td></tr>
+            <tr><td class="item-name">Astronaut-special & Dalum-special</td><td class="price-value">55,-</td></tr>
+            <tr><td class="item-name">Champagnebrus & Astronaut</td><td class="price-value">40,-</td></tr>
+            <tr><td class="item-name">Sodavand</td><td class="price-value">20,-</td></tr>
+            <tr><td class="item-name">Cocio</td><td class="price-value">20,-</td></tr>
+            <tr><td class="item-name">Vand</td><td class="price-value">15,-</td></tr>
+            <tr><td class="item-name">Faxekondi booster</td><td class="price-value">30,-</td></tr>
+            <tr><td class="item-name">Toast</td><td class="price-value">15,-</td></tr>
+            <tr><td class="item-name">Chips</td><td class="price-value">20,-</td></tr>
+            <tr><td class="item-name">Kasse shaker</td><td class="price-value">575,-</td></tr>
+            <tr><td class="item-name">Fustage øl</td><td class="price-value">900,-</td></tr>
         </table>
         
-        <div class="quote-container">
+        <div class="bottom-section">
             <span class="quote-text">"En god dag starter med kaffe - men ender altid med øl"</span>
             <div class="footer">Velkommen i caféen</div>
         </div>
